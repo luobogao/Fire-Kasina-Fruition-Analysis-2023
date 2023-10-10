@@ -8,6 +8,11 @@ Explore the neurology of meditation "Fruitions" through EEG data analysis and vi
 - [Results](#results)
 - [Usage](#usage)
 
+## Citations
+
+### Loukkonen et al. 2023 - [Cessations of consciousness in meditation: Advancing a scientific understanding of nirodha samāpatti](https://pubmed.ncbi.nlm.nih.gov/37714573/) 
+### Chowdhury et al. 2023 - [Investigation of advanced mindfulness meditation “cessation” experiences using EEG spectral analysis in an intensively sampled case study](https://www.sciencedirect.com/science/article/abs/pii/S0028393223002282?via%3Dihub)
+### Raw data - [OSF]((https://osf.io/srfnz/?view_only=1a408d6b96a6402bbf1464418ec3219e))
 
 ## 🧘‍️About the Project
 Daniel Ingram, a seasoned meditator, has generously [shared](https://osf.io/srfnz/?view_only=1a408d6b96a6402bbf1464418ec3219e) his EEG recordings during Fire Kasina practice, offering a rich dataset encompassing 127 Fruition events and detailed subjective descriptions. This repository replicates and extends the findings from a recent study by ([Chowdhury et al., 2023](https://www.sciencedirect.com/science/article/abs/pii/S0028393223002282?via%3Dihub)), which reported notable shifts in Alpha band power before and after Fruition events, using a previous dataset provided by Daniel. This new dataset is much larger and contains much better subjective tagging, allowing for deeper and more confident analysis. The same trends identified by Chowdhury et al. appear in this data, and are relatively easy for anyone to replicate themselves using Python. Beyond confirming these prior results, this larger dataset reveals new patterns around Fruition events not noticed before. Using Kmeans clustering, at least two distinct types of Alpha power behavior emerge in the time windows before and after Fruitions. This suggests interesting new questions to study in future research. Daniel and I hope that this data and code will empower others to perform their own analys
@@ -23,14 +28,23 @@ Daniel Ingram, a seasoned meditator, has generously [shared](https://osf.io/srfn
 
 ## Results
 
-Alpha power reliably changes in the seconds before and after Fruitions. Chowdhury et al. reported a consistent increase of Alpha power in the 40 seconds before Fruitions, a decrease immediately afterward, and a gradual return to the original power in the following 40 seconds. The new dataset from Daniel appears to have this same behavior, but only for some Fruitions. The graph below plots two distinct behaviors of Alpha power around Fruitions. Cluster 2 behaves identically to the result study results, with an increase followed by a decrease then a recovery. A second distinct behavior (Cluster 1) starts out with low Alpha power then dramatically increases afterward. Both behaviors show reliable increases in Alpha power following Fruitions.
+Alpha power reliably changes in the seconds before and after Fruitions. Chowdhury et al. reported a consistent increase of Alpha power in the 40 seconds before Fruitions, a decrease immediately afterward, and a gradual return to the original power in the following 40 seconds, as shown below. For clarity I've added the blue lines to emphasize the linear trends they describe in the study, and a vertical red line to highlight the fruition moments (all the charts below show fruition events at 'zero'):
+
+![Study Results](images/Study_alpha_annotated.png)
+
+The new dataset from Daniel appears to have this same behavior, but only for some Fruitions. The graph below plots two distinct behaviors of Alpha power around Fruitions. Cluster 2 behaves identically to the result study results, with an increase followed by a decrease then a recovery. A second distinct behavior (Cluster 1) starts out with low Alpha power then dramatically increases afterward. Both behaviors show reliable increases in Alpha power following Fruitions.
 
 ![Alpha Band Behavior](images/alpha_band_changes.png)
 
-These changes are not apparent in the control group (fake 'Fruitions' where Daniel squints and talks just like he does in real Fruitions). Alpha power does change dramatically around these fake events, but not in a consistent way, leading to flat averaged values. Some fake events show decreased Alpha power in the 40 seconds afterwards.
+Focusing just on Cluster 2, which shows the most dramatic changes, this graph plots every fruition together with the averaged line, which demonstrates how consistent this behavior is across many fruitions:
+
+![All Fruition Events (Cluster 2)](images/cluster_2_all.png)
+
+These changes are not apparent in the control group (fake 'Fruitions' where Daniel squints and talks just like he does in real Fruitions). Alpha power does change dramatically around these fake events, but not in a consistent way, leading to flat averaged values. Some fake events show decreased Alpha power in the 40 seconds afterwards:
 
 ![Control Group Behavior](images/control_alpha_changes.png)
 
+However, there is another control category which isn't mentioned: the dramatic increases in Alpha band power seen around fruitions also occurs frequently elsewhere in the meditation sessions - not around muscle movement or talking, but from some other cause that hasn't been explored yet.
 
 
 ## Analysis
@@ -39,7 +53,7 @@ Besides confirming the results from Chowdhury et al., new behavior was noticed i
 It would not be surprising to measure different categories of fruition behavior. One possible explaination is that Fruitions appear in four distinct phenomenological categories. Another possibility is that a fruition event which happen days into a long retreat may look neurologically different than a fruition which occurs during a shorter meditation period. Long retreat participants often describe a 'deepening' which occurs over time during the retreat. Is it possible that this meditation momentum built up over days of constant practice reduces the initial Alpha band power which occurs before a Fruition? This would change the mechanism of how Fruitions act in the brain which Chowdury et al. propose.
 
 ## Note on Terminology
-"Fruition" events are the main focus of this analysis, which are also called "Cessations" in the Chowdhury study and in other studies. These events are the culmination (the 'fruit', /phala/ in Pali) of meditation practice in Therevada Buddhism. I understand them as the goal of this tradition, the successful result of navigating the tangled knot of our subjective experience of the world, a moment when all the "conditioned" aspects of reality end, effectively terminating consciousness for a brief moment. Sometimes this moment can be extended longer, event indefinitely, in which case it is called "Nirodha Samāpatti". Those long events appears to involve a total collapse of EEG signals, which is very obvious to any analyst and hardly requiring sophisticated tools to characterize, but these briefer "fruitions" which Daniel produces multiple times per meditation session are in some ways more interesting. EEG data collected in moments leading up to Fruitions may give us hints about how other meditators can progress toward this goal. EEG data collected after these events suggests possible benefits of Fruitions to our neurological health, such as increased connectivity.
+"Fruition" events are the main focus of this analysis, which are also called "Cessations" in the Chowdhury study. The Laukkonen study refers to "Nirodha Samapatti" - an extended versions of these Fruitions/Cessations which can last for minutes or even hours. These events are the culmination (the 'fruit', /phala/ in Pali) of meditation practice in Therevada Buddhism. I understand them as the goal of this tradition, the successful result of navigating the tangled knot of our subjective experience of the world, a moment when all the "conditioned" aspects of reality end, effectively terminating consciousness for a brief moment. Sometimes this moment can be extended longer, event indefinitely, in which case it is called "Nirodha Samāpatti". Those long events appears to involve a total collapse of EEG signals, which is very obvious to any analyst and hardly requiring sophisticated tools to characterize, but these briefer "fruitions" which Daniel produces multiple times per meditation session are in some ways more interesting. EEG data collected in moments leading up to Fruitions may give us hints about how other meditators can progress toward this goal. EEG data collected after these events suggests possible benefits of Fruitions to our neurological health, such as increased connectivity.
 
 ## Why study Fruitions?
 
@@ -52,17 +66,21 @@ While these results are intruiging and appear to be reliable, Alpha band power c
 My personal work will probably involve applying this signal analysis to the Muse data, then incorporating it into a custom Android app which performs this analysis on live data, with an audio feedback system which indicates when the probability of a fruition event reaches a certain threshold. This will allow for users to experiment with triggering false positives themselves through movement or some other trigger, and it could also reveal to users certain unnoticed aspects of their own meditation practice - that has the potential to be extremely valuable to many people.
 
 
-## Usage
+## Installation and Usage
 All the graphs mentioned in this README can be reproduced immediately by simply running the python code found in the repository. The Alpha band powers for each day are already pre-processed and included in the "Band Data" folders. Python code for rebuilding this band power analysis is also provided and easy to use.
 
 ```bash
+# Install dependencies (includes MNE for rebuilding the band power files)
+pip3 install pandas matplotlib numpy scikit-learn
+
 # Run the final analysis, averaging every fruition event on the same plot:
 python3 Plot_Fruition_Band_Comparison.py 'Band Data - Meditations'
 
 # Run the same analysis on the control data ('fake' fruitions where Daniel moves his face muscles and speaks just like during real fruition events):
 python3 Plot_Fruition_Band_Comparison.py 'Band Data - Control'
 
-# If you want to rebuild the Alpha band power levels from the .EEG files, run this below (you will need to download the folder from OSF which has the EEG data):
+# If you want to rebuild the Alpha band power levels from the .EEG files, run this below (you will need to download the folder from OSF which has the EEG data), after installing the MNE library:
+pip3 install mne
 python3 Process_Alpha_Data.py <Path to EEG data>
 
 ```
