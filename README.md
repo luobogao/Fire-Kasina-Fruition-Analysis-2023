@@ -8,11 +8,11 @@ Explore the neurology of meditation "Fruitions" through EEG data analysis and vi
 - [Results](#results)
 - [Usage](#usage)
 
-## Citations
+## Research Citations
 
-### Loukkonen et al. 2023 - [Cessations of consciousness in meditation: Advancing a scientific understanding of nirodha samāpatti](https://pubmed.ncbi.nlm.nih.gov/37714573/) 
-### Chowdhury et al. 2023 - [Investigation of advanced mindfulness meditation “cessation” experiences using EEG spectral analysis in an intensively sampled case study](https://www.sciencedirect.com/science/article/abs/pii/S0028393223002282?via%3Dihub)
-### Raw data - [OSF]((https://osf.io/srfnz/?view_only=1a408d6b96a6402bbf1464418ec3219e))
+- Loukkonen et al. 2023 - [Cessations of consciousness in meditation: Advancing a scientific understanding of nirodha samāpatti](https://pubmed.ncbi.nlm.nih.gov/37714573/) 
+- Chowdhury et al. 2023 - [Investigation of advanced mindfulness meditation “cessation” experiences using EEG spectral analysis in an intensively sampled case study](https://www.sciencedirect.com/science/article/abs/pii/S0028393223002282?via%3Dihub)
+
 
 ## 🧘‍️About the Project
 Daniel Ingram, a seasoned meditator, has generously [shared](https://osf.io/srfnz/?view_only=1a408d6b96a6402bbf1464418ec3219e) his EEG recordings during Fire Kasina practice, offering a rich dataset encompassing 127 Fruition events and detailed subjective descriptions. This repository replicates and extends the findings from a recent study by ([Chowdhury et al., 2023](https://www.sciencedirect.com/science/article/abs/pii/S0028393223002282?via%3Dihub)), which reported notable shifts in Alpha band power before and after Fruition events, using a previous dataset provided by Daniel. This new dataset is much larger and contains much better subjective tagging, allowing for deeper and more confident analysis. The same trends identified by Chowdhury et al. appear in this data, and are relatively easy for anyone to replicate themselves using Python. Beyond confirming these prior results, this larger dataset reveals new patterns around Fruition events not noticed before. Using Kmeans clustering, at least two distinct types of Alpha power behavior emerge in the time windows before and after Fruitions. This suggests interesting new questions to study in future research. Daniel and I hope that this data and code will empower others to perform their own analys
