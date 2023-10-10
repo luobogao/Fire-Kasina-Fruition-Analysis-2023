@@ -30,7 +30,7 @@ Daniel Ingram, a seasoned meditator, has generously [shared](https://osf.io/srfn
 
 Alpha power reliably changes in the seconds before and after Fruitions. Chowdhury et al. reported a consistent increase of Alpha power in the 40 seconds before Fruitions, a decrease immediately afterward, and a gradual return to the original power in the following 40 seconds, as shown below. For clarity I've added the blue lines to emphasize the linear trends they describe in the study, and a vertical red line to highlight the fruition moments (all the charts below show fruition events at 'zero'):
 
-![Study Results](images/Study_alpha_annotated.png)
+![Study Results](images/study_alpha_annotated.png)
 
 The new dataset from Daniel appears to have this same behavior, but only for some Fruitions. The graph below plots two distinct behaviors of Alpha power around Fruitions. Cluster 2 behaves identically to the result study results, with an increase followed by a decrease then a recovery. A second distinct behavior (Cluster 1) starts out with low Alpha power then dramatically increases afterward. Both behaviors show reliable increases in Alpha power following Fruitions.
 

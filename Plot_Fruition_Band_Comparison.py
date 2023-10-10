@@ -140,7 +140,7 @@ if __name__ == '__main__':
 
   # Step 4: Line Plot of Averaged Columns per Cluster
   plt.figure(figsize=(14, 7))
-  plt.yscale('log')
+  #plt.yscale('log')
   plt.grid(axis='x', linestyle='--', alpha=0.5)  # Keeping only x-axis gridlines
 
   # Transpose clean_data back to the original orientation for plotting
@@ -174,7 +174,7 @@ if __name__ == '__main__':
 
     plt.figure(figsize=(14, 7))
     plt.grid(axis='x', linestyle='--', alpha=0.5)  # Keeping only x-axis gridlines
-    plt.yscale('log')
+    #plt.yscale('log')
     
     # Plotting all raw data rows in the cluster
     for col in columns_in_cluster.columns:
@@ -187,10 +187,10 @@ if __name__ == '__main__':
     plt.plot(x_values, rolling_avg_of_avg, label=f'Average Line', color='black', linewidth=2)
 
     # Add labels and legend
-    plt.title(f'All Rows and Average for Cluster {cluster + 1}')
+    plt.title(f'All Fruition Events for Cluster {cluster + 1}')
     plt.xlabel('Time (centered at Fruition Event)')
     plt.ylabel('Alpha Power')
-    plt.legend(title='Cluster', loc='upper right')
+    #plt.legend(title='Cluster', loc='upper right')
     plt.axvline(x=0, color='k', linestyle='--', label='Event Time')    
     plt.grid(False)  
     plt.show()
