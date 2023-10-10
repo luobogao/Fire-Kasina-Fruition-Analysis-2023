@@ -35,7 +35,7 @@ Alpha power reliably changes in the seconds before and after Fruitions. Chowdhur
 
 ![Study Results](images/study_alpha_annotated.png)
 
-The new dataset from Daniel appears to have this same behavior, but only for some Fruitions. The graph below plots two distinct behaviors of Alpha power around Fruitions. Cluster 2 behaves identically to the result study results, with an increase followed by a decrease then a recovery. A second distinct behavior (Cluster 1) starts out with low Alpha power then dramatically increases afterward. Both behaviors show reliable increases in Alpha power following Fruitions.
+The new dataset from Daniel appears to have this same behavior, but only for some Fruitions. The graph below plots two distinct behaviors of Alpha power around Fruitions. Cluster 1 behaves identically to the result study results, with an increase followed by a decrease then a recovery. A second distinct behavior (Cluster 2) starts out with low Alpha power then dramatically increases afterward. Both behaviors show reliable increases in Alpha power following Fruitions.
 
 ![Alpha Band Behavior](images/alpha_band_changes.png)
 
