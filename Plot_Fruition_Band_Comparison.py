@@ -187,7 +187,7 @@ if __name__ == '__main__':
     plt.plot(x_values, rolling_avg_of_avg, label=f'Average Line', color='black', linewidth=2)
 
     # Add labels and legend
-    plt.title(f'All Fruition Events for Cluster {cluster + 1}')
+    plt.title(f'All Fruition Events for Cluster {cluster + 0}')
     plt.xlabel('Time (centered at Fruition Event)')
     plt.ylabel('Alpha Power')
     #plt.legend(title='Cluster', loc='upper right')
