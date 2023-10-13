@@ -20,7 +20,7 @@ Daniel Ingram, a seasoned meditator, has generously [shared](https://osf.io/srfn
 "Fruition" events are the main focus of this analysis, which are also called "Cessations" in the Chowdhury study. In the context of this work and Chowdhury's paper, these two words mean the same thing: an interesting state of consciousness which sometimes occurs in the Therevadan meditation path. Fruitions are not the "goal" of Buddhism or even of Therevadan Buddhism in particular, they are a phenomena which some encounter during meditation which has traditionally been recognized as the culmination of certain sequences of events during practice. Fruitions as a kind of Cessation should also not be mistaken for "Nirodha", a categorically different experience which is also often confusingly described as a "cessation" (and is the topic of other recent research using EEG). For the purpose of this project I will exclusively use the word "Fruition".
 
 ## Features
-- **Fruition Sample Size**: Daniel's new dataset contains 127 fruitions (which have so far been transcribed), plus much more commentary explaining the type of fruition (e.g., 'no-self') and other phenomenological descriptions which may prove useful for other types of analysis. Chowdhury et al. used 37 fruition events for their study.
+- **Event Sample Size**: Daniel's new dataset contains 127 fruition events so far transcribed from the video logs. These events were determined by Daniel according to his subjective interpretation and should not be interpreted as a perfect record of this neurological event. Daniel also included much more commentary explaining the type of fruition (e.g., 'no-self') and other phenomenological descriptions which may prove useful for other types of analysis. Chowdhury et al. used 37 fruition events for their study from a previous dataset.
   
 - **Pre-Processing Provided**: Alpha band powers for each second have been provided for each recorded session. Preprocessing was performed with the Python library MNE.
 
@@ -84,8 +84,6 @@ raw.set_eeg_reference(ref_channels=['A2'])
 
 ```
 
-
-
 ## Next Steps
 
 While these results are intruiging and appear to be reliable, Alpha band power changes are not a definitive marker for Fruition events. This observed Alpha power behavior (significant increase after events, occasional drops before events) occurs many times during each recorded EEG session, including times which are not tagged 'Fruitions' by Daniel. One possibility is that the fruition effect can occur in other times during meditation, perhaps observed by Daniel with different phenomenology. Perhaps the more likely possibility is that this Alpha band behavior is not a reliable indicator of Fruitions, and that the observed behavior around Fruitions has another explaination - perhaps not noise from facial movements, but perhaps some other trigger. 
@@ -94,7 +92,7 @@ My personal work will probably involve applying this signal analysis to the Muse
 
 
 ## Contribution
-Please feel free to contribute your own analysis! This work is just a first step, looking at the simplest possible changes around fruitions. The purpose of publishing this data so far is to support future work.
+This work is just a first step, looking at the simplest possible changes around fruitions. The purpose of publishing this data so far is to support future work. I am eager to find others with coding experience who would like to collaborate - no meditation experience necessary. There is a lot of work to do and a large potential to benefit others.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/YourFeature`)
